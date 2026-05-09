@@ -1,0 +1,25 @@
+#taskbar {
+  background: #111;
+  color: #0f0;
+  font-family: 'Courier New',Courier,monospace;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  padding: 0 5px;
+  user-select: none;
+}
+.start-btn {
+  background: #222;
+  color: #0f0;
+  border: 1px solid #0f0;
+  padding: 2px 8px;
+  cursor: pointer;
+}
+.taskbar-icons {
+  display: flex;
+  gap: 4px;
+  margin-left: 10px;
+}
+.tray {
+  margin-left: auto;
+}

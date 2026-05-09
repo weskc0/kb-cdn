@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Web OS</title>
+  <link rel="stylesheet" href="css/desktop.css" />
+  <link rel="stylesheet" href="css/taskbar.css" />
+  <link rel="stylesheet" href="css/window.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" />
+</head>
+<body>
+  <div id="boot-screen">
+    <div class="boot-logo">🖥️</div>
+    <div class="boot-text">Booting Mini Web OS...</div>
+  </div>
+
+  <div id="desktop" class="hidden"></div>
+
+  <div id="taskbar">
+    <button id="start-btn" class="start-btn">⬛ Start</button>
+    <div id="taskbar-icons"></div>
+    <div class="tray">12:00</div>
+  </div>
+
+  <div id="start-menu" class="start-menu hidden">
+    <div class="start-menu-header">Mini Web OS</div>
+    <ul class="app-list">
+      <li data-app="browser"><img src="assets/browser.png" /> Browser</li>
+      <li data-app="notes"><img src="assets/notes.png" /> Notes</li>
+      <li data-app="calculator"><img src="assets/calculator.png" /> Calculator</li>
+      <li data-app="settings"><img src="assets/settings.png" /> Settings</li>
+      <li data-app="brief">Morning Brief</li>
+      <li data-app="about"><img src="assets/about.png" /> About</li>
+    </ul>
+    <div class="start-menu-footer"><button id="shutdown-btn">⏻ Shut Down</button></div>
+  </div>
+
+  <div id="windows"></div>
+
+  <div id="desktop-context-menu" class="context-menu hidden">
+    <ul>
+      <li data-action="new-file">New Text File</li>
+      <li data-action="refresh">Refresh</li>
+      <li data-action="change-bg">Change Wallpaper</li>
+      <li class="separator"></li>
+      <li data-action="display-settings">Display Settings</li>
+    </ul>
+  </div>
+
+  <div id="window-context-menu" class="context-menu hidden">
+    <ul>
+      <li data-action="minimize">Minimize</li>
+      <li data-action="maximize">Maximize</li>
+      <li data-action="close">Close</li>
+    </ul>
+  </div>
+
+  <script src="js/os.js"></script>
+  <script src="js/windowManager.js"></script>
+  <script src="js/taskbar.js"></script>
+  <script src="js/contextMenu.js"></script>
+  <script src="js/apps/browser.js"></script>
+  <script src="js/apps/notes.js"></script>
+  <script src="js/apps/calculator.js"></script>
+  <script src="js/apps/settings.js"></script>
+  <script src="js/apps/about.js"></script>
+  <script src="js/apps/brief.js"></script>
+  <script src="js/boot.js"></script>
+</body>
+</html>

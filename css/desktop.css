@@ -1,0 +1,12 @@
+:root {
+  --desktop-bg:#003366;
+  --icon-size:64px;
+  --font-family:'Courier New',Courier,monospace;
+}
+body,html{margin:0;height:100%;overflow:hidden;background:var(--desktop-bg);font-family:var(--font-family);color:#0f0;}
+#desktop{position:absolute;top:0;bottom:30px;left:0;right:0;display:flex;flex-wrap:wrap;align-content:flex-start;padding:10px;gap:10px;}
+.desktop-icon{width:var(--icon-size);text-align:center;cursor:pointer;}
+.desktop-icon img{width:100%;height:auto;}
+#taskbar{position:absolute;bottom:0;left:0;right:0;height:30px;background:#111;display:flex;align-items:center;padding:0 5px;}
+#start-btn{background:#333;color:#0f0;border:none;padding:4px 8px;cursor:pointer;}
+#clock{margin-left:auto;color:#0f0;}
